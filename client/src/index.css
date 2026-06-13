@@ -1,0 +1,53 @@
+/* ── Design System ─────────────────────────────────────────────────────────── */
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface2: #1a1a24;
+  --surface3: #22222f;
+  --border: rgba(255,255,255,0.07);
+  --border-hover: rgba(255,255,255,0.15);
+  --accent: #e8ff4a;
+  --accent-dim: rgba(232,255,74,0.12);
+  --accent-glow: rgba(232,255,74,0.25);
+  --red: #ff4a6b;
+  --red-dim: rgba(255,74,107,0.12);
+  --orange: #ff8c4a;
+  --orange-dim: rgba(255,140,74,0.12);
+  --blue: #4a9fff;
+  --blue-dim: rgba(74,159,255,0.12);
+  --green: #4affb0;
+  --green-dim: rgba(74,255,176,0.12);
+  --text: #f0f0f8;
+  --text-muted: rgba(240,240,248,0.45);
+  --text-faint: rgba(240,240,248,0.2);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-accent: 0 0 30px rgba(232,255,74,0.15);
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 3px; }
+
+/* ── Typography ────────────────────────────────────────────────────────────── */
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.04em; }
+
+/* ── Utility ───────────────────────────────────────────────────────────────── */
+button { font-family: var(--font-body); cursor: pointer; border: none; background: none; }
+input, textarea, select { font-family: var(--font-body); }
+
