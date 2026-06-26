@@ -21,7 +21,6 @@ function StatCard({ label, value, color }) {
   );
 }
 
-// ── Filter Bar ──────────────────────────────────────────────────────────────
 function FilterBar({ filters, onChange, taskCount }) {
   const btn = (key, val, label, activeColor) => {
     const active = filters[key] === val;
@@ -64,7 +63,6 @@ function FilterBar({ filters, onChange, taskCount }) {
   );
 }
 
-// ── App ─────────────────────────────────────────────────────────────────────
 export default function App() {
   const [tasks, setTasks] = useState([]);
   const [stats, setStats] = useState(null);
@@ -78,7 +76,7 @@ export default function App() {
   const [filters, setFilters] = useState({ status: 'all', priority: 'all' });
   const [serverOnline, setServerOnline] = useState(null);
 
-  // Toast helper
+  
   const notify = (msg) => {
     setToast(msg);
     setTimeout(() => setToast(''), 3000);
@@ -103,7 +101,6 @@ export default function App() {
     } catch {}
   }, []);
 
-  // Initial load + health check
   useEffect(() => {
     (async () => {
       setLoading(true);
@@ -121,12 +118,10 @@ export default function App() {
     })();
   }, []);
 
-  // Refetch on filter/search changes
   useEffect(() => {
     if (serverOnline) fetchTasks();
   }, [filters, search, serverOnline]);
 
-  // CRUD handlers
   async function handleCreate(data) {
     setFormLoading(true);
     try {
@@ -174,7 +169,6 @@ export default function App() {
     }
   }
 
-  // ── Render ───────────────────────────────────────────────────────────────
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
 
