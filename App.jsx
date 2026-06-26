@@ -3,7 +3,6 @@ import { api } from './api.js';
 import TaskForm from './TaskForm.jsx';
 import TaskCard from './TaskCard.jsx';
 
-// ── Stats Bar ───────────────────────────────────────────────────────────────
 function StatCard({ label, value, color }) {
   return (
     <div style={{
